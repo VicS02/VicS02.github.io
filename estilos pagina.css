@@ -3,18 +3,17 @@ body {
     background-color: ghostwhite;
 }
 
-/*@media only screen and (min-width: 1260px){}*/
 .container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 140px 50px 1.5fr 1.5fr 40px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 140px 50px 1fr 1.4fr 40px;
     gap: 1em 1em;
     grid-auto-flow: row;
     grid-template-areas:
-      "header header header"
-      "nav nav nav"
-      "main main main"
-      "nosotros nosotros colegio"
-      "footer footer footer";
+      "header header"
+      "nav nav"
+      "main main"
+      "nosotros colegio"
+      "footer footer";
   }
   
 header { grid-area: header; }
@@ -76,7 +75,9 @@ grid-template-areas: "ninios adolescentes examenes";
 text-align:center;
 }
 
-.ninios { grid-area: ninios;} 
+.ninios { grid-area: ninios;
+     position:relative;
+    } 
 .ninios img{
     width:80%;
     margin-top:15%;
@@ -85,20 +86,26 @@ text-align:center;
 }
 .ninios div{
     position:absolute;
-    top:76%;
-    left:3.8%;
+    top:90%;
+    left:10%;
     z-index:1;
-    background-color:cornsilk;
+    background-color:rgb(255, 239, 176);
     color:darkblue;
     text-decoration: none;
     height:10%;
-    width:26.1%;
+    width:80%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: transform .2s;
     }
 
-.ninios img:hover{
-    transform:scale(0.9)
-}
-.adolescentes { grid-area: adolescentes; }
+.ninios img:hover {
+    transform:scale(0.9)}
+.ninios div:hover{
+     transform:scale(0.9)}
+
+.adolescentes { grid-area: adolescentes;  position:relative;}
 .adolescentes img{
     width:80%;
     margin-top:15%;
@@ -106,20 +113,25 @@ text-align:center;
     transition: transform .2s;
 }
 .adolescentes img:hover{
-    transform:scale(0.9)
-}
+    transform:scale(0.9)}
 .adolescentes div{
     position:absolute;
-    top:76%;
-    left:36.2%;
+    top:90%;
+    left:10%;
     z-index:1;
-    background-color:cornsilk;
+    background-color:rgb(255, 239, 176);
     color:darkblue;
     text-decoration: none;
     height:10%;
-    width:26.5%;
+    width:80%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: transform .2s;
     }
-.examenes { grid-area: examenes; }
+.adolescentes div:hover{
+        transform:scale(0.9)}
+.examenes { grid-area: examenes; position:relative; }
 .examenes img{
     width:80%;
     margin-top:15%;
@@ -127,23 +139,27 @@ text-align:center;
     transition: transform .2s;
 }
 .examenes img:hover{
-    transform:scale(0.9)
-}
+    transform:scale(0.9)}
 .examenes div{
     position:absolute;
-    top:76%;
-    left:69%;
+    top:90%;
+    left:10%;
     z-index:1;
-    background-color:cornsilk;
+    background-color:rgb(255, 239, 176);
     color:darkblue;
     text-decoration: none;
-    height:9.8%;
-    width:26.3%;
+    height:10%;
+    width:80%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: transform .2s;
     }
-
+.examenes div:hover{
+        transform:scale(0.9)}
 .nosotros { grid-area: nosotros;
-    margin-right:30px;
-    margin-left:10px
+    margin-left:10px;
+    width:95%
 }
 
 .nosotros p {
@@ -151,15 +167,16 @@ text-align:center;
     text-align:justify;
    }
 .nosotros h2{
-    font-size: 2.2em;
-    }
+    font-size: 2.2em;}
 
 .colegio { grid-area: colegio; 
     justify-self:end;}
 
 .colegio img{
     border-radius: 20px;
-border:2px solid black}
+border:2px solid black;
+margin-top:10%;
+height:80%}
 
 footer { grid-area: footer; }
 
@@ -168,4 +185,57 @@ footer, footer a{
     color: white;
     text-align: center;
     padding: 0.5em;
+}
+
+@media only screen and (max-width: 1280px){
+    .ninios div{top:75%;}
+.adolescentes div{ top:75%}
+.examenes div{ top:75%}
+header h1{
+    top: 1em;
+    font-size:2.2em;
+    }
+.nosotros { width:95%;}
+
+.colegio img{
+margin-top:5em;
+height:65%}
+}
+
+@media only screen and (max-width: 1150px){
+    .container{
+        grid-template-columns: 40% 60%;
+    }
+    header h1{font-size:2em; }
+        
+}
+@media only screen and (max-width: 1080px){
+    .container{
+        grid-template-rows: 160px 50px 0.1fr 0.7fr 0.5fr 0.5fr 0.2fr 40px;
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "."
+        "main"
+        "nosotros"
+        "colegio"
+        "."
+        "footer";
+    }
+    nav{display:grid;
+    grid-template-columns: 33% 33% 33%} 
+    main{display:grid;
+        grid-template-columns: 33% 33% 33%}
+    .ninios div{top:63%;}
+    .adolescentes div{ top:63%}
+    .examenes div{ top:63%}
+    .colegio{
+        justify-self: center;}
+    .colegio img{
+        height:79%
+    } 
+}
+@media only screen and (max-width: 920px){
+/*problema acá*/
 }
