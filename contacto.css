@@ -1,0 +1,126 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: ghostwhite;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-template-rows: 140px 50px 100px 1fr 3fr 50px;
+    gap: 1em 1em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "titulo titulo titulo"
+      "redes . mapa"
+      "formulario formulario formulario"
+      "footer footer footer";
+  }
+  
+  header { grid-area: header; }
+
+  header img {
+      float: left;
+      width: 120px;
+      margin-left: 6%;
+      margin-top:1%
+    }
+    
+  header img:hover{
+      cursor:pointer}
+    
+  header h1 {
+      position: relative;
+      top: 0.6em;
+      text-align:center;
+      font-size:2.5em;
+    }
+    
+  nav{
+      grid-area: nav;
+       padding:1px;
+       display: grid;
+       grid-template-columns: 33% 33% 33%;
+       justify-content: center;
+       align-items: center;
+      }
+  
+  button{
+      font:inherit;
+      background-color: darkblue;
+      color:white;
+      height:50px;
+      font-size:20px;
+      font-weight: bold;
+      border:none; 
+  }
+  
+  button:hover {
+      cursor: pointer;
+      animation-name: hover;
+      animation-duration: 3s;
+      animation-timing-function: ease-out;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+  }
+  
+  @keyframes hover {
+      from {background-color: darkblue;}
+      to {background-color: rgb(78, 2, 255);}
+    }
+.titulo{
+    grid-area:titulo;
+    font-size:1.7em;
+    text-align:center;
+}
+  .redes { grid-area: redes;
+            margin-left:20px;
+            font-size:1.5em;
+            display:grid;
+            grid-template-rows:1fr 1fr 1fr;
+            padding:15px
+             }
+
+  .redes i{
+      height:40px
+  }
+  .redes p{
+      background-color: antiquewhite; }
+
+  .redes .predes{
+      background-color:ghostwhite; }
+
+  .redes a{
+      text-decoration:none;
+      color:darkblue;}
+   
+   .redes a:hover{
+       color:rgb(78, 2, 255);
+   }
+  
+  .mapa { grid-area: mapa; 
+            justify-self:center;
+            text-align:center;
+            font-size:1.6em;
+            
+        }
+  .mapa iframe{
+        border:none;
+        width:600px;
+        height:350px;
+        margin-top:15px;
+  }
+  
+  i { margin-right:15px; 
+    color:darkblue}
+
+  .formulario { grid-area: formulario; }
+  
+footer { grid-area: footer; }
+
+footer, footer a{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
