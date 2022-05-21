@@ -1,11 +1,11 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; 
     background-color: ghostwhite;
 }
 
 .container {  display: grid;
-    grid-template-columns: 1fr 100px 1fr;
-    grid-template-rows: 140px 50px 100px 1fr 3fr 50px;
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-rows: 140px 50px 100px 1fr 1fr 50px;
     gap: 1em 1em;
     grid-auto-flow: row;
     grid-template-areas:
@@ -15,6 +15,7 @@ body {
       "redes . mapa"
       "formulario formulario formulario"
       "footer footer footer";
+
   }
   
   header { grid-area: header; }
@@ -31,9 +32,10 @@ body {
     
   header h1 {
       position: relative;
-      top: 0.6em;
+      top: 1.5em;
       text-align:center;
       font-size:2.5em;
+      font-weight:bold
     }
     
   nav{
@@ -43,6 +45,7 @@ body {
        grid-template-columns: 33% 33% 33%;
        justify-content: center;
        align-items: center;
+       width:100%
       }
   
   button{
@@ -68,18 +71,22 @@ body {
       from {background-color: darkblue;}
       to {background-color: rgb(78, 2, 255);}
     }
-.titulo{
-    grid-area:titulo;
-    font-size:1.7em;
-    text-align:center;
-}
-  .redes { grid-area: redes;
-            margin-left:20px;
-            font-size:1.5em;
-            display:grid;
-            grid-template-rows:1fr 1fr 1fr;
-            padding:15px
-             }
+    .titulo{
+        grid-area:titulo;
+        font-size:1.7em;
+        text-align:center;
+        margin-top:20px;
+    }
+    .titulo h2{
+        font-weight:bold;
+    }
+      .redes { grid-area: redes;
+                margin-left:20px;
+                font-size:1.5em;
+                display:grid;
+                grid-template-rows:1fr 1fr 1fr;
+                align-items: center;
+         }
 
   .redes i{
       height:40px
@@ -114,7 +121,17 @@ body {
   i { margin-right:15px; 
     color:darkblue}
 
-  .formulario { grid-area: formulario; }
+  .formulario { grid-area: formulario;
+margin-top:30px}
+.titulo_form{
+    margin-bottom:30px;
+    text-align:center;
+    font-weight:bold;
+}
+#msg{margin-top:5px; border: 2px solid darkblue;}
+.row{margin-bottom:15px; }
+#texto{margin-top:5px; border: 2px solid darkblue}
+#mail{margin-top:5px; border: 2px solid darkblue}
   
 footer { grid-area: footer; }
 
@@ -124,3 +141,10 @@ footer, footer a{
     text-align: center;
     padding: 0.5em;
 }
+
+@media only screen and (min-width:0px){
+    .container{
+        margin-left:10px; margin-right:10px;padding-left:1px;padding-right:1px;
+        max-width:97.5vw
+    }
+}  
