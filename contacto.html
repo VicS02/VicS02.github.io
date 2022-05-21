@@ -37,26 +37,58 @@
         </div>
 
         
-       <form class="formulario">
-            <h2 class="titulo_form">Ingrese título aquí</h2>
+       <form class="formulario" name="f">
+            <h2 class="titulo_form">¿Querés saber algo más sobre nuestra propuesta?</h2>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="texto">Nombre y apellido</label>
-                  <input type="text" class="form-control" id="texto" placeholder="Nombre y apellido" required>
+                  <input type="text" class="form-control" id="texto" name="t" placeholder="Nombre y apellido">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="mail">Mail de contacto</label>
-                  <input type="email" class="form-control" id="mail" placeholder="Mail" required>
+                  <input type="email" class="form-control" id="mail" name="e" placeholder="Mail">
                 </div>
             </div>
                 <div class="form-group">
                     <label for="msg">Mensaje</label>
-                    <textarea class="form-control" rows="7" id="msg" placeholder="Deje su mensaje" required></textarea>
+                    <textarea class="form-control" rows="7" id="msg" name="m" placeholder="Deje su mensaje"></textarea>
                   </div>
+                  <button type="submit" class="btn btn-primary mt-2" onclick="validar()">Enviar</button>
        </form>
 
     <footer>Céspedes 3172 (CABA) - <a href=  "mailto: ingles.companiademaria@gmail.com">ingles.companiademaria@gmail.com</a></footer>
     </div>
       </div>
+
+      <script>
+          var validarNombre = function(event){
+                if (document.f.t.value.length == 0){
+                    alert ("Por favor, escriba su nombre y apellido.");
+                    event.preventDefault();
+                }
+            }
+            var validarMail = function(event){
+                if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(f.e.value))
+                {return (true) }
+                 alert("Por favor, ingrese una dirección de mail válida.")
+                return (false)
+                event.preventDefault();
+            }
+            var validarMensaje = function(event){
+                if (document.f.m.value.length == 0){
+                    alert ("Por favor, deje un mensaje.");
+                    event.preventDefault()
+                }
+            }
+
+            var validar = function(){
+                validarNombre(event);
+                validarMail(event);
+                validarMensaje(event);
+            };
+
+            f.addEventListener("submit", validar);
+          
+      </script>
 </body>
 </html>

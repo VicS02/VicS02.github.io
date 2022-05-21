@@ -71,58 +71,57 @@ body {
       from {background-color: darkblue;}
       to {background-color: rgb(78, 2, 255);}
     }
-    .titulo{
-        grid-area:titulo;
-        font-size:1.7em;
-        text-align:center;
-        margin-top:20px;
+.titulo{
+   grid-area:titulo;
+   font-size:1.7em;
+   text-align:center;
+   margin-top:20px;
     }
-    .titulo h2{
-        font-weight:bold;
-    }
-      .redes { grid-area: redes;
-                margin-left:20px;
-                font-size:1.5em;
-                display:grid;
-                grid-template-rows:1fr 1fr 1fr;
-                align-items: center;
+.titulo h2{
+    font-weight:bold; }
+
+.redes { grid-area: redes;
+    margin-left:20px;
+    font-size:1.5em;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    align-items: center;
          }
 
-  .redes i{
-      height:40px
-  }
-  .redes p{
-      background-color: antiquewhite; }
+.redes p{
+  background-color: antiquewhite; }
 
-  .redes .predes{
-      background-color:ghostwhite; }
+.redes .predes{
+    background-color:ghostwhite; }
 
-  .redes a{
-      text-decoration:none;
-      color:darkblue;}
+.redes a{
+  text-decoration:none;
+  color:darkblue;}
    
-   .redes a:hover{
-       color:rgb(78, 2, 255);
+.redes a:hover{
+  color:rgb(78, 2, 255);
    }
   
-  .mapa { grid-area: mapa; 
-            justify-self:center;
-            text-align:center;
-            font-size:1.6em;
-            
-        }
-  .mapa iframe{
-        border:none;
-        width:600px;
-        height:350px;
-        margin-top:15px;
+.mapa { grid-area: mapa; 
+    justify-self:center;
+    text-align:center;
+    font-size:1.6em;      
+    }
+
+.mapa iframe{
+    border:none;
+    width:600px;
+    height:350px;
+    margin-top:15px;
   }
   
-  i { margin-right:15px; 
-    color:darkblue}
+i { margin-right:15px; 
+    color:darkblue;
+    height:40px}
 
-  .formulario { grid-area: formulario;
-margin-top:30px}
+.formulario { grid-area: formulario;
+    margin-top:30px}
+    
 .titulo_form{
     margin-bottom:30px;
     text-align:center;
@@ -132,6 +131,7 @@ margin-top:30px}
 .row{margin-bottom:15px; }
 #texto{margin-top:5px; border: 2px solid darkblue}
 #mail{margin-top:5px; border: 2px solid darkblue}
+.btn{background-color: darkblue;}
   
 footer { grid-area: footer; }
 
