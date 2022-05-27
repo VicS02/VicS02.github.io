@@ -319,3 +319,14 @@ padding-top:15px;}
         left:1%;
     }
 }
+
+@media only screen and (max-width:600px){
+
+.ninios img{margin-top:3vh; width:60vw}
+.adolescentes img{width:60vw}
+.examenes img{width:60vw}
+
+.ninios div{width:60vw; top:50%; left:27%}
+.adolescentes div{width:60vw; top:50%; left:27%}
+.examenes div{width:60vw; top:50%; left:27%;}
+}
