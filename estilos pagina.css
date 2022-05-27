@@ -267,8 +267,6 @@ button{display:none}
 width:95vw;
 padding-top:15px;}
 
-
-
 .dropdown-content a {
     display:block;
     position:absolute;
@@ -288,7 +286,6 @@ padding-top:15px;}
     background-color: rgb(221, 221, 221);
   }
   
-
 .main{
     display:grid;
     grid-template-columns:1fr;
