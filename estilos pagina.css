@@ -25,15 +25,20 @@ header img {
     margin-top:1%
   }
   
-header img:hover{
+header:hover{
     cursor:pointer}
   
 header h1 {
     position: relative;
-    top: 0.6em;
+    top: 4vh;
     text-align:center;
-    font-size:2.5em;
+    font-size:2.8vw;
+    color:black
   }
+
+header a{
+    text-decoration:none
+}
   
 nav{
     grid-area: nav;
@@ -43,7 +48,9 @@ nav{
      justify-content: center;
      align-items: center;
     }
-
+.menu{
+    display:none
+}
 button{
     font:inherit;
     background-color: darkblue;
@@ -68,6 +75,11 @@ button:hover {
     to {background-color: rgb(78, 2, 255);}
   }
 
+button a{
+    color:white;
+    text-decoration:none
+}
+
 .main{ grid-area:main;
 display:grid;
 grid-template-columns: 33% 33% 33%;
@@ -89,7 +101,7 @@ text-align:center;
     top:90%;
     left:10%;
     z-index:1;
-    background-color:rgb(255, 239, 176);
+    background-color:antiquewhite;
     color:darkblue;
     text-decoration: none;
     height:10%;
@@ -119,7 +131,7 @@ text-align:center;
     top:90%;
     left:10%;
     z-index:1;
-    background-color:rgb(255, 239, 176);
+    background-color:antiquewhite;
     color:darkblue;
     text-decoration: none;
     height:10%;
@@ -145,7 +157,7 @@ text-align:center;
     top:90%;
     left:10%;
     z-index:1;
-    background-color:rgb(255, 239, 176);
+    background-color:antiquewhite;
     color:darkblue;
     text-decoration: none;
     height:10%;
@@ -191,10 +203,6 @@ footer, footer a{
     .ninios div{top:75%;}
 .adolescentes div{ top:75%}
 .examenes div{ top:75%}
-header h1{
-    top: 1em;
-    font-size:2.2em;
-    }
 .nosotros { width:95%;}
 
 .colegio img{
@@ -203,15 +211,12 @@ height:65%}
 }
 
 @media only screen and (max-width: 1150px){
-    .container{
-        grid-template-columns: 40% 60%;
-    }
-    header h1{font-size:2em; }
+    .container{grid-template-columns: 40% 60%; } 
         
 }
 @media only screen and (max-width: 1080px){
     .container{
-        grid-template-rows: 160px 50px 0.1fr 0.7fr 0.5fr 0.5fr 0.2fr 40px;
+        grid-template-rows: 140px 50px 0.1fr 0.7fr 0.5fr 0.5fr 0.2fr 40px;
         grid-template-columns:1fr;
         grid-template-areas:
         "header"
@@ -230,12 +235,80 @@ height:65%}
     .ninios div{top:63%;}
     .adolescentes div{ top:63%}
     .examenes div{ top:63%}
-    .colegio{
-        justify-self: center;}
-    .colegio img{
-        height:79%
-    } 
+    .colegio{justify-self: center;}
+    .colegio img{ height:79% } 
 }
+
 @media only screen and (max-width: 920px){
-/*problema acá*/
+
+    .container{
+        grid-template-rows: 140px 50px 1.5fr 0.5fr 0.5fr 40px;
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "nosotros"
+        "colegio"
+        "footer";
+    }
+
+header img{margin-left:3%}
+
+header h1{
+    font-size:3.9vh;
+    top:2vh;
+    left:1%;
+    max-width:90vw
+}
+
+button{display:none}
+.menu{display:inline;
+width:95vw;
+padding-top:15px;}
+
+
+
+.dropdown-content a {
+    display:block;
+    position:absolute;
+    left:-100%;
+    width:80vw;
+    background-color: white;
+    z-index: 1;
+    border:1px solid rgba(0,0,0,0.3);
+    color: black;
+    text-decoration: none;
+    text-align:center;
+    height:40px;
+    padding-top:10px
+  } 
+
+  .dropdown-content a:hover {
+    background-color: rgb(221, 221, 221);
+  }
+  
+
+.main{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:"ninios"
+                        "adolescentes"
+                        "examenes";
+                    
+}
+
+.ninios img{margin-top:3vh; width:45vw}
+.adolescentes img{width:45vw}
+.examenes img{width:45vw}
+
+.ninios div{width:45vw; top:100%; left:27%}
+.adolescentes div{width:45vw; top:100%; left:27%}
+.examenes div{width:45vw; top:100%; left:27%;}
+
+.nosotros{margin-top:20px}
+
+.colegio img{ width:80vw} 
+
 }
