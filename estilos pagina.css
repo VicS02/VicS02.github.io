@@ -304,7 +304,8 @@ padding-top:15px;}
 .adolescentes div{width:45vw; top:100%; left:27%}
 .examenes div{width:45vw; top:100%; left:27%;}
 
-.nosotros{margin-top:20px}
+.nosotros{margin-top:20px;
+width:90vw}
 
 .colegio img{ width:80vw} 
 
@@ -319,6 +320,7 @@ padding-top:15px;}
 
 @media only screen and (max-width:600px){
 
+header img{width:100px}
 .ninios img{margin-top:3vh; width:60vw}
 .adolescentes img{width:60vw}
 .examenes img{width:60vw}
@@ -326,4 +328,7 @@ padding-top:15px;}
 .ninios div{width:60vw; top:75%; left:19%}
 .adolescentes div{width:60vw; top:75%; left:19%}
 .examenes div{width:60vw; top:75%; left:19%;}
+
+footer{font-size:14px;
+align-content:center}
 }
