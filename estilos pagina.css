@@ -321,6 +321,8 @@ width:90vw}
 @media only screen and (max-width:600px){
 
 header img{width:100px}
+header h1{margin-bottom:5px;
+margin-right: 5px}
 .ninios img{margin-top:3vh; width:60vw}
 .adolescentes img{width:60vw}
 .examenes img{width:60vw}
@@ -329,6 +331,6 @@ header img{width:100px}
 .adolescentes div{width:60vw; top:75%; left:19%}
 .examenes div{width:60vw; top:75%; left:19%;}
 
-footer{font-size:14px;
+footer{font-size:10px;
 align-content:center}
 }
