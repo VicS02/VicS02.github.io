@@ -114,20 +114,32 @@ footer, footer a{
 }
 
 @media only screen and (max-width: 920px){
-    button{display:none}
+
+.container{
+grid-template-rows: 140px 50px 1fr 0.5fr 1fr 0.5fr 40px;
+grid-template-columns:1fr;
+grid-template-areas:
+    "header"
+    "nav"
+    "info_aexalevi"
+    "imagen_aexalevi"
+    "info_cambridge"
+    "imagen_cambridge"
+    "footer";
+    }
+
+button{display:none}
 .menu{display:inline;
 width:95vw;
 padding-top:15px;}
 
 header img{margin-left:3%}
 
-
 header h1{
-    font-size:3.9vh;
-    top:2vh;
+    font-size:4vh;
+    top:3vh;
     left:1%;
-    max-width:90vw
-}
+    max-width:90vw}
 
 .dropdown-content a {
     display:block;
@@ -144,7 +156,35 @@ header h1{
     padding-top:10px
   } 
 
-  .dropdown-content a:hover {
-    background-color: rgb(221, 221, 221);
-  }
+  .dropdown-content a:hover {background-color: rgb(221, 221, 221); }
+
+  .imagen_aexalevi, .imagen_cambridge{
+    justify-self: center;
+    align-self:center;
+    width:40vw}
+
+   .info_aexalevi, .info_cambridge{margin-right:5px} 
 }
+
+@media only screen and (max-width:600px){
+    .container{
+        grid-template-rows: 140px 50px 1fr 0.25fr 1.1fr 0.25fr 40px;}
+    header h1{font-size:3.5vh;
+        margin-left: 20px;}
+    footer{font-size:12.5px;}
+}
+@media only screen and (max-width:475px){
+    header h1{font-size:3vh;}
+    header img{width: 25vw; margin-top:20px;}
+    footer{font-size:11.5px;}
+    .imagen_aexalevi, .imagen_cambridge{width:50vw; margin:0} }
+
+@media only screen and (max-width:400px){
+    footer{display:flex;
+        align-items: center;
+        font-size:10px;
+        margin-top:10px}
+} 
+@media only screen and (max-width:330px){
+    header h1{font-size:2.5vh;}
+    .imagen_aexalevi{height:35vw; width:auto}}

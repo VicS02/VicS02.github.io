@@ -311,7 +311,7 @@ width:90vw}
 }
 
 @media only screen and (max-width:475px){
-header h1{font-size:3vh; margin-left: 20px;}
+header h1{font-size:3vh;}
 footer{font-size:11.5px;}
 .ninios img, .adolescentes img, .examenes img{width:60vw;}
 .ninios div, .adolescentes div, .examenes div{width:60vw; left:19%}
@@ -330,14 +330,13 @@ font-size:10px;
 margin-top:10px}
 }
 
-@media only screen and (max-width:340px){
-header h1{top:2vh}
+@media only screen and (max-width:330px){
+header h1{font-size:2.5vh;}
 .colegio img{height:60vw;
     width:auto;}
-
-.ninios div, .adolescentes div, .examenes div{top:85%;}
+    .ninios div, .adolescentes div, .examenes div{top:80%;}
 }
 
 @media only screen and (max-width:300px){
-    .ninios div, .adolescentes div, .examenes div{top:60%;}
+    .ninios div, .adolescentes div, .examenes div{top:65%;}
 }
